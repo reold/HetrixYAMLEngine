@@ -1,0 +1,47 @@
+# HETRIX BASE FUNCTIONS
+HETRIX:
+  FILTERS:
+    - green filter
+  TEXT: &text
+    content: "untitled"
+    fontsize: 24
+    duration: 5
+    posx: "center"
+    poxy: "center"
+    color: [0, 0, 0]
+# END
+
+projectName: Youtube Video
+projectDesc: null
+
+projectFps: 25
+projectDuration: auto
+projectResolution: [500, 333]
+outputPath: rickroll slowmotion.mp4
+
+sources:
+  intro: quick intro.mp4
+  video_1: rickroll.mp4
+
+fontSources:
+  RobotoReg: &RobotoReg Roboto\Roboto-Regular.ttf
+
+timeline:
+  - type: text
+    data:
+      <<: *text
+      content: Hello world!
+      duration: 2
+      font: *RobotoReg
+
+  - type: video
+    data: intro
+
+  - type: text
+    data:
+      <<: *text
+      content: The Rick show is going to start
+      font: *RobotoReg
+
+  - type: video
+    data: video_1

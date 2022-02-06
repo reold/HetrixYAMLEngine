@@ -1,0 +1,5 @@
+*.mp4
+!quick intro.mp4
+!rickroll.mp4
+*.yaml
+!project.yaml
